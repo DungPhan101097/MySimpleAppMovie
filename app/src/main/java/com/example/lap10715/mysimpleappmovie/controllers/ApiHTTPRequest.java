@@ -1,5 +1,6 @@
 package com.example.lap10715.mysimpleappmovie.controllers;
 
+import com.example.lap10715.mysimpleappmovie.models.Movie;
 import com.example.lap10715.mysimpleappmovie.models.MoviesResponse;
 
 import retrofit2.Call;
@@ -21,5 +22,5 @@ public interface ApiHTTPRequest {
     Call<MoviesResponse> getUpComingMovies(@Query("page") int page, @Query("api_key") String apiKey);
 
     @GET("movie/{id}")
-    Call<MoviesResponse> getMovieDetails(@Path("id") int id, @Query("api_key") String apiKey);
+    Call<Movie> getMovieDetails(@Path("id") int id, @Query("api_key") String apiKey);
 }

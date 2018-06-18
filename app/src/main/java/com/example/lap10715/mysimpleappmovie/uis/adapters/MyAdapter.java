@@ -24,6 +24,7 @@ import com.example.lap10715.mysimpleappmovie.controllers.loaders.MovieLoader;
 import com.example.lap10715.mysimpleappmovie.controllers.modules.AdapterModule;
 import com.example.lap10715.mysimpleappmovie.models.Movie;
 import com.example.lap10715.mysimpleappmovie.models.MoviesResponse;
+import com.example.lap10715.mysimpleappmovie.uis.MyMovieItemClickListenner;
 
 import java.util.List;
 
@@ -111,7 +112,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     .into(myHolder.poster);
 
             // Set click lister for each item.
-
+            myHolder.card.setOnClickListener(new MyMovieItemClickListenner(movie.getId()));
         }
     }
 
